@@ -2,8 +2,9 @@ import React from 'react';
 import {cyan500} from 'material-ui/styles/colors';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import RaisedButton from 'material-ui/RaisedButton';
 import AppBar from 'material-ui/AppBar';
+import logo from '../images/index';
+
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -14,14 +15,15 @@ const muiTheme = getMuiTheme({
   },
 });
 
-
-const App = () => (
-  <MuiThemeProvider muiTheme={muiTheme}>
-    <AppBar title="My AppBar" >
-      <RaisedButton label="Cadastrar sua Empresa" onButtonPress={() => {}} />
-    </AppBar>
-
-  </MuiThemeProvider>
+const TopRow = () => (
+  render() {
+    return (
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <AppBar title="Startups juiz de fora" />
+      </MuiThemeProvider>
+    )
+  }
 );
 
-export default App;
+
+export default TopRow;
